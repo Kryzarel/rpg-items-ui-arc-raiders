@@ -1,0 +1,14 @@
+{
+  "name": "com.kryzarel.rpg-items-ui-arc-raiders",
+  "version": "0.0.0",
+  "displayName": "Kryz - RPG Items UI - ARC Raiders",
+  "description": "An example UI for the RPG Items package, based on the game ARC Raiders.",
+  "license": "MIT",
+  "author": {
+    "name": "Kryzarel"
+  },
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.0",
+    "com.kryzarel.rpg-items": "0.0.0"
+  }
+}
