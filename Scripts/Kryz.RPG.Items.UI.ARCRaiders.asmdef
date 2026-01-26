@@ -1,0 +1,17 @@
+{
+    "name": "Kryz.RPG.Items.UI.ARCRaiders",
+    "rootNamespace": "Kryz.RPG.Items.UI.ARCRaiders",
+    "references": [
+        "Kryz.RPG.Items",
+        "Kryz.RPG.Items.Views"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
