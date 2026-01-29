@@ -4943,16 +4943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31a2acfb7eeb1f44b2d328d5450a6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.Initializer
-  inventoryView: {fileID: 0}
+  inventoryController: {fileID: 1331238663}
   cursorInventoryView: {fileID: 1584029741}
   itemDefinitions: []
   itemCounts: 
-  inventorySaveData:
-    ItemStacks: []
-  saveDataJson: 
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0

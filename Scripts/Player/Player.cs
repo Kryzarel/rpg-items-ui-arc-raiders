@@ -1,6 +1,6 @@
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public class Character
+	public class Player
 	{
 		public readonly Inventory Equipment = new(4);
 		public readonly Inventory Backpack = new(10);
