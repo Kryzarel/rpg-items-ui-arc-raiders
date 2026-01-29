@@ -35,7 +35,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		private void Awake()
 		{
-			// itemFactory.Register(new CurrencyItemCreator());
+			itemFactory.Register(new CraftingMaterialCreator());
 			// itemFactory.Register(new EquipableItemCreator());
 		}
 
