@@ -32,13 +32,19 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		private void Awake()
 		{
 			itemFactory.Register(new BasicItemCreator());
-			// itemFactory.Register(new EquipableItemCreator());
 		}
 
 		private void Start()
 		{
 			inventoryController!.SetPlayer(player);
 			cursorInventoryView!.SetInventory(cursorInventory);
+
+			for (int i = 0; i < itemDefinitions.Length; i++)
+			{
+				player.Stash.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
+			}
+
+			inventoryController.SetContainer(player.Stash);
 		}
 	}
 }
