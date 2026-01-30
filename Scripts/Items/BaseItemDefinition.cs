@@ -13,6 +13,18 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[field: SerializeField, TextArea]
 		public string Description { get; private set; } = string.Empty;
 
+		[field: Header("ARC Raiders")]
+		[field: SerializeField]
+		public ItemCategory Category { get; private set; } = null!;
+		[field: SerializeField]
+		public ItemRarity Rarity { get; private set; } = null!;
+		[field: SerializeField]
+		public Sprite TypeIcon { get; private set; } = null!;
+		[field: SerializeField]
+		public float Weight { get; private set; } = 1;
+		[field: SerializeField]
+		public int SellPrice { get; private set; } = 10;
+
 		protected virtual void OnValidate()
 		{
 			Id = name;

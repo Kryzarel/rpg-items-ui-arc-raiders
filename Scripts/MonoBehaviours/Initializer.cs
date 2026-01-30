@@ -32,6 +32,8 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		private void Awake()
 		{
 			itemFactory.Register(new BasicItemCreator());
+			itemFactory.Register(new AugmentItemCreator());
+			itemFactory.Register(new ShieldItemCreator());
 		}
 
 		private void Start()

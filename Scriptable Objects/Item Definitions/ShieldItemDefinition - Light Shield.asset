@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4625b2b527b3b014685788013d9c98d7, type: 3}
+  m_Name: ShieldItemDefinition - Light Shield
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ShieldItemDefinition
+  <Id>k__BackingField: ShieldItemDefinition - Light Shield
+  <Icon>k__BackingField: {fileID: 21300000, guid: 4f5338a5fbbed7244863270f65bd1a43, type: 3}
+  <Name>k__BackingField: Light Shield
+  <Description>k__BackingField: A lightweight shield that blocks a small portion
+    of incoming damage without impacting mobility.
+  <Category>k__BackingField: {fileID: 11400000, guid: de369aeb790d7b04d8d037e2fcfcba8f, type: 2}
+  <Rarity>k__BackingField: {fileID: 11400000, guid: b524e74ced0480b4d8786b85351e6012, type: 2}
+  <TypeIcon>k__BackingField: {fileID: 21300000, guid: daf2d6432fb1d7c4892aaa1d65e8ca7b, type: 3}
+  <Weight>k__BackingField: 5
+  <SellPrice>k__BackingField: 640
+  <ShieldCharge>k__BackingField: 40
+  <DamageMitigation>k__BackingField: 40
+  <MovementPenalty>k__BackingField: 0

@@ -4993,7 +4993,11 @@ MonoBehaviour:
   cursorInventoryView: {fileID: 1584029741}
   itemDefinitions:
   - {fileID: 11400000, guid: a532dc94c92d11f46872701f5bef8078, type: 2}
-  itemCounts: 05000000
+  - {fileID: 11400000, guid: 051c83d96a42c7e49a99a4b38f2d40c3, type: 2}
+  - {fileID: 11400000, guid: b8f0468bb35c9104d9abb7eaece2ffd9, type: 2}
+  - {fileID: 11400000, guid: a0e1d856636e8084485e2cb77e6b8643, type: 2}
+  - {fileID: 11400000, guid: 26c9e75c440e9f242a553bc94762d427, type: 2}
+  itemCounts: 0500000001000000010000000100000001000000
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0
