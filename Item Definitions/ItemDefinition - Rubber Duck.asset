@@ -18,5 +18,6 @@ MonoBehaviour:
   <Description>k__BackingField: Always there to lend an ear, should you need it.
   <Category>k__BackingField: {fileID: 11400000, guid: 7dcd5322f4320764ba17df638c7b75ca, type: 2}
   <Rarity>k__BackingField: {fileID: 11400000, guid: c7bf4d06a07da214dac32821a25a75bd, type: 2}
+  <TypeIcon>k__BackingField: {fileID: 21300000, guid: ac9c200ec09ac9749a071d1fc7bb7669, type: 3}
   <SellPrice>k__BackingField: 1000
   <MaxStacks>k__BackingField: 15
