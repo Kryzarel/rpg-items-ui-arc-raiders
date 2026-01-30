@@ -27,15 +27,37 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "ddf255b7-857e-4b70-85bd-0fd0e7f718e3",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "Press(behavior=1)",
+                    "name": "One Modifier",
+                    "id": "3de6ae1e-465d-4c7c-b079-884cad846281",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "8f1dec77-db36-47c0-b0a7-d7a03951ce10",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Use",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "26ee0c4b-a4bb-4310-a892-6cc373794603",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -62,7 +84,7 @@
                 {
                     "name": "modifier",
                     "id": "13f464a1-844f-424c-bda0-cbbb68f31c04",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
