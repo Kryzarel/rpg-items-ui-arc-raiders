@@ -5286,6 +5286,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0e1d856636e8084485e2cb77e6b8643, type: 2}
   - {fileID: 11400000, guid: 26c9e75c440e9f242a553bc94762d427, type: 2}
   itemCounts: 0500000001000000010000000100000001000000
+  quickUseCategory: {fileID: 11400000, guid: 3f127c210dd00f84da1161bd70dae220, type: 2}
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0

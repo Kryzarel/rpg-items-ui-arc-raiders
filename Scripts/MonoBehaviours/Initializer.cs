@@ -10,14 +10,13 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		private readonly Inventory cursorInventory = new(1);
 		private readonly Player player = new();
 
-		[SerializeField]
-		private InventoryController? inventoryController;
-		[SerializeField]
-		private InventoryView? cursorInventoryView;
-		[SerializeField]
-		private BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
-		[SerializeField]
-		private int[] itemCounts = Array.Empty<int>();
+		[Header("References")]
+		[SerializeField] InventoryController? inventoryController;
+		[SerializeField] InventoryView? cursorInventoryView;
+		[SerializeField] BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
+		[SerializeField] int[] itemCounts = Array.Empty<int>();
+		[Header("Other")]
+		[SerializeField] ItemCategory? quickUseCategory;
 
 		private void OnValidate()
 		{
@@ -38,6 +37,8 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		private void Start()
 		{
+			player.QuickUse.CategoryRestriction = quickUseCategory;
+
 			inventoryController!.SetPlayer(player);
 			cursorInventoryView!.SetInventory(cursorInventory);
 

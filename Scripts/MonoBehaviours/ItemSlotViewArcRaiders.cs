@@ -13,10 +13,21 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[SerializeField] protected Image? footerMiddleIcon;
 		[SerializeField] protected Image? footerRightIcon;
 		[Header("ARC Raiders Settings")]
-		[SerializeField] protected Color baseBorderColor;
+		[SerializeField] protected Color borderColor;
 
 		protected override void RefreshBound()
 		{
+			if (inventory is RestrictedInventory restricted && restricted.CategoryRestriction != null)
+			{
+				emptySprite = restricted.CategoryRestriction.Icon;
+				emptyColor = borderColor;
+			}
+			else
+			{
+				emptySprite = null;
+				emptyColor = Color.clear;
+			}
+
 			base.RefreshBound();
 
 			if (itemStack.Item is BaseItem baseItem)
@@ -39,7 +50,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			}
 			else
 			{
-				if (border != null) border.color = baseBorderColor;
+				if (border != null) border.color = borderColor;
 				if (footerLeftIcon != null) footerLeftIcon.enabled = false;
 				if (footerMiddleIcon != null) footerMiddleIcon.enabled = false;
 				if (footerRightIcon != null) footerRightIcon.enabled = false;
@@ -60,7 +71,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		{
 			base.RefreshUnbound();
 
-			if (border != null) border.color = baseBorderColor;
+			if (border != null) border.color = borderColor;
 			if (footer != null && footer.activeSelf) footer.SetActive(false);
 		}
 	}

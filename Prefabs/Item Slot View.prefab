@@ -740,7 +740,7 @@ MonoBehaviour:
   footerLeftIcon: {fileID: 1294022433213995001}
   footerMiddleIcon: {fileID: 1285573077074129492}
   footerRightIcon: {fileID: 2169644567716861373}
-  baseBorderColor: {r: 0.2901961, g: 0.3019608, b: 0.3529412, a: 1}
+  borderColor: {r: 0.2901961, g: 0.3019608, b: 0.3529412, a: 1}
 --- !u!222 &5905139285609236718
 CanvasRenderer:
   m_ObjectHideFlags: 0
