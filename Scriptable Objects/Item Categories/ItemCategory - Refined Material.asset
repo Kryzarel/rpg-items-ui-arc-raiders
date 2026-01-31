@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemCategory - Refined Material
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
   <Name>k__BackingField: Refined Material
+  <Icon>k__BackingField: {fileID: 21300000, guid: 0c5a6785129477c48b821069bf10d4f5, type: 3}

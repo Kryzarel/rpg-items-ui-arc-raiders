@@ -7,5 +7,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	{
 		[field: SerializeField]
 		public string Name { get; private set; } = string.Empty;
+		[field: SerializeField]
+		public Sprite Icon { get; private set; } = null!;
 	}
 }

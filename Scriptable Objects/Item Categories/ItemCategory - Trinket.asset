@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemCategory - Trinket
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
   <Name>k__BackingField: Trinket
+  <Icon>k__BackingField: {fileID: 21300000, guid: ac9c200ec09ac9749a071d1fc7bb7669, type: 3}

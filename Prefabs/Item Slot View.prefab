@@ -730,10 +730,11 @@ MonoBehaviour:
   text: {fileID: 6603593841475992696}
   selectable: {fileID: 4370254306232879713}
   textFormatString: '{0}'
+  emptySprite: {fileID: 0}
   emptyColor: {r: 0, g: 0, b: 0, a: 0}
   nonEmptyColor: {r: 1, g: 1, b: 1, a: 1}
-  disabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
-  disabledSprite: {fileID: 21300000, guid: d6a28db715b54b74188ee3ad33f7dd09, type: 3}
+  unboundSprite: {fileID: 21300000, guid: d6a28db715b54b74188ee3ad33f7dd09, type: 3}
+  unboundColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   border: {fileID: 3764952091060821264}
   footer: {fileID: 5708773992029419658}
   footerLeftIcon: {fileID: 1294022433213995001}

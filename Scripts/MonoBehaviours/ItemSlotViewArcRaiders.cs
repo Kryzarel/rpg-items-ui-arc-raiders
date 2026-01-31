@@ -15,9 +15,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[Header("ARC Raiders Settings")]
 		[SerializeField] protected Color baseBorderColor;
 
-		protected override void RefreshActive()
+		protected override void RefreshBound()
 		{
-			base.RefreshActive();
+			base.RefreshBound();
 
 			if (itemStack.Item is BaseItem baseItem)
 			{
@@ -56,9 +56,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			}
 		}
 
-		protected override void RefreshInactive()
+		protected override void RefreshUnbound()
 		{
-			base.RefreshInactive();
+			base.RefreshUnbound();
 
 			if (border != null) border.color = baseBorderColor;
 			if (footer != null && footer.activeSelf) footer.SetActive(false);

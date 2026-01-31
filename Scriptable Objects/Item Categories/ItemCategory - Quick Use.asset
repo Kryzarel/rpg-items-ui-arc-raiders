@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemCategory - Quick Use
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
   <Name>k__BackingField: Quick Use
+  <Icon>k__BackingField: {fileID: 21300000, guid: 76de4972860fcf0418243e4d16a2b9d4, type: 3}

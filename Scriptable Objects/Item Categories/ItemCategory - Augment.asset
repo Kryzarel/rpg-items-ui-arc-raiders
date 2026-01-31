@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ItemCategory - Augment
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
   <Name>k__BackingField: Augment
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1469b2bf4be10654dbe7bf2845597eef, type: 3}
