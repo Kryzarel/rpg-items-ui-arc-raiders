@@ -17,9 +17,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		protected override void RefreshBound()
 		{
-			if (inventory is RestrictedInventory restricted && restricted.ItemFilter != null)
+			if (inventory is IRestrictedInventoryVisuals restricted)
 			{
-				emptySprite = restricted.ItemFilter.Icon;
+				emptySprite = restricted.GetSprite(slotIndex);
 				emptyColor = borderColor;
 			}
 			else

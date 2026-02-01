@@ -18,6 +18,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[Header("Other")]
 		[SerializeField] ItemFilterBase? quickUseFilter;
 		[SerializeField] ItemFilterBase? safePocketFilter;
+		[SerializeField] Sprite[] equipmentSprites = Array.Empty<Sprite>();
 
 		private void OnValidate()
 		{
@@ -41,6 +42,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		{
 			player.QuickUse.ItemFilter = quickUseFilter;
 			player.SafePocket.ItemFilter = safePocketFilter;
+			player.Equipment.SlotSprites = equipmentSprites;
 
 			inventoryController!.SetPlayer(player);
 			cursorInventoryView!.SetInventory(cursorInventory);

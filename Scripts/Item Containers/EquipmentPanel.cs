@@ -1,13 +1,16 @@
 using System;
 using System.Buffers;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public sealed class EquipmentPanel : Inventory
+	public sealed class EquipmentPanel : Inventory, IRestrictedInventory, IRestrictedInventoryVisuals
 	{
 		private readonly HashSet<int> lockedSlots = new();
 		private readonly int[] ints = { 0, 1, 2, 3, 4 };
+
+		public Sprite[] SlotSprites = Array.Empty<Sprite>();
 
 		public EquipmentPanel(ArrayPool<ItemStack>? pool = null) : base(4, pool) { }
 
@@ -102,8 +105,21 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			return !IsSlotLocked(index) && base.TryRemove(index, count, out result, out removed);
 		}
 
-		private bool CanReceiveItem(int index, in ItemStack stack)
+		private ReadOnlySpan<int> GetSlotIndexes(in ItemStack stack)
 		{
+			return stack.Item switch
+			{
+				AugmentItem => new ReadOnlySpan<int>(ints, 1, 1),
+				ShieldItem => new ReadOnlySpan<int>(ints, 1, 1),
+				WeaponItem => new ReadOnlySpan<int>(ints, 2, 2),
+				_ => ReadOnlySpan<int>.Empty,
+			};
+		}
+
+		public bool CanReceiveItem(int index, in ItemStack stack)
+		{
+			if (IsSlotLocked(index)) return false;
+
 			return stack.Item == null || index switch
 			{
 				0 => stack.Item is AugmentItem,
@@ -114,15 +130,14 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			};
 		}
 
-		private ReadOnlySpan<int> GetSlotIndexes(in ItemStack stack)
+		public bool CanRemoveItem(int index)
 		{
-			return stack.Item switch
-			{
-				AugmentItem => new ReadOnlySpan<int>(ints, 1, 1),
-				ShieldItem => new ReadOnlySpan<int>(ints, 1, 1),
-				WeaponItem => new ReadOnlySpan<int>(ints, 2, 2),
-				_ => ReadOnlySpan<int>.Empty,
-			};
+			return !IsSlotLocked(index);
+		}
+
+		public Sprite? GetSprite(int index)
+		{
+			return index < 0 || index >= size ? null : SlotSprites[index];
 		}
 	}
 }

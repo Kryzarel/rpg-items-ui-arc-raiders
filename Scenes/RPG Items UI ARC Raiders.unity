@@ -5289,6 +5289,11 @@ MonoBehaviour:
   itemCounts: 050000000100000001000000010000000100000001000000
   quickUseFilter: {fileID: 11400000, guid: ac345e013cf2e8c45b5df92bdbbc8fd6, type: 2}
   safePocketFilter: {fileID: 11400000, guid: 767ad6dcc2bfd954b979d9d121eeff7a, type: 2}
+  equipmentSprites:
+  - {fileID: 21300000, guid: 1469b2bf4be10654dbe7bf2845597eef, type: 3}
+  - {fileID: 21300000, guid: d65a66bb7e8efa14887b6097169f0f07, type: 3}
+  - {fileID: 21300000, guid: 1fdca7efb535ac9498f096bfb3c9ff51, type: 3}
+  - {fileID: 21300000, guid: 1fdca7efb535ac9498f096bfb3c9ff51, type: 3}
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0
