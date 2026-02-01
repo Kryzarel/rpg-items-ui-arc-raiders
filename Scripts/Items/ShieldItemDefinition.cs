@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	[CreateAssetMenu(fileName = nameof(ShieldItemDefinition), menuName = "Kryz/RPG Items UI - ARC Raiders/" + nameof(ShieldItemDefinition))]
+	[CreateAssetMenu(fileName = nameof(ShieldItemDefinition), menuName = "Kryz/RPG Items UI - ARC Raiders/Item Definitions/" + nameof(ShieldItemDefinition))]
 	public class ShieldItemDefinition : BaseItemDefinition
 	{
 		[field: Header("Shield")]

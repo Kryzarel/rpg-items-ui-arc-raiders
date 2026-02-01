@@ -17,9 +17,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		protected override void RefreshBound()
 		{
-			if (inventory is RestrictedInventory restricted && restricted.CategoryRestriction != null)
+			if (inventory is RestrictedInventory restricted && restricted.ItemFilter != null)
 			{
-				emptySprite = restricted.CategoryRestriction.Icon;
+				emptySprite = restricted.ItemFilter.Icon;
 				emptyColor = borderColor;
 			}
 			else
@@ -39,7 +39,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 				if (footerLeftIcon != null)
 				{
-					footerLeftIcon.sprite = baseItem.Definition.TypeIcon;
+					footerLeftIcon.sprite = baseItem.Definition.ItemType.Icon;
 					footerLeftIcon.enabled = true;
 				}
 

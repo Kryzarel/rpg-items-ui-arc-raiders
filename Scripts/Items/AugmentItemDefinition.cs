@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	[CreateAssetMenu(fileName = nameof(AugmentItemDefinition), menuName = "Kryz/RPG Items UI - ARC Raiders/" + nameof(AugmentItemDefinition))]
+	[CreateAssetMenu(fileName = nameof(AugmentItemDefinition), menuName = "Kryz/RPG Items UI - ARC Raiders/Item Definitions/" + nameof(AugmentItemDefinition))]
 	public class AugmentItemDefinition : BaseItemDefinition
 	{
 		[field: Header("Augment")]
@@ -14,6 +14,8 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		public int QuickUseSlots { get; private set; } = 4;
 		[field: SerializeField]
 		public int AugmentedSlots { get; private set; } = 0;
+		[field: SerializeField]
+		public ItemFilterBase? AugmentSlotsFilter { get; private set; }
 		[field: SerializeField]
 		public int SafePocketSlots { get; private set; } = 0;
 		[field: SerializeField]

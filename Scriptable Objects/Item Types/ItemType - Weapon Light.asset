@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e5787c1b4e1474eaf03b9a452d2e3c, type: 3}
+  m_Name: ItemType - Weapon Light
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
+  <Icon>k__BackingField: {fileID: 21300000, guid: 447234b836d53f046b5447db5c144f1a, type: 3}
+  <SubType>k__BackingField: {fileID: 11400000, guid: 7975ad15ead4edc41a4d2118a6aef250, type: 2}

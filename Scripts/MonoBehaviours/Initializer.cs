@@ -16,7 +16,8 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[SerializeField] BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
 		[SerializeField] int[] itemCounts = Array.Empty<int>();
 		[Header("Other")]
-		[SerializeField] ItemCategory? quickUseCategory;
+		[SerializeField] ItemFilterBase? quickUseFilter;
+		[SerializeField] ItemFilterBase? safePocketFilter;
 
 		private void OnValidate()
 		{
@@ -33,11 +34,13 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			itemFactory.Register(new BasicItemCreator());
 			itemFactory.Register(new AugmentItemCreator());
 			itemFactory.Register(new ShieldItemCreator());
+			itemFactory.Register(new WeaponItemCreator());
 		}
 
 		private void Start()
 		{
-			player.QuickUse.CategoryRestriction = quickUseCategory;
+			player.QuickUse.ItemFilter = quickUseFilter;
+			player.SafePocket.ItemFilter = safePocketFilter;
 
 			inventoryController!.SetPlayer(player);
 			cursorInventoryView!.SetInventory(cursorInventory);

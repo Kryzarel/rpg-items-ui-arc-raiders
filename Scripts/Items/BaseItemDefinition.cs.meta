@@ -5,9 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - <Icon>k__BackingField: {fileID: 21300000, guid: c1a4ef20960644447a4595a6421125de, type: 3}
-  - <Category>k__BackingField: {fileID: 11400000, guid: 51de8803e05f1e943983deeaf04f9276, type: 2}
+  - <ItemType>k__BackingField: {fileID: 11400000, guid: 7dcd5322f4320764ba17df638c7b75ca, type: 2}
   - <Rarity>k__BackingField: {fileID: 11400000, guid: c7bf4d06a07da214dac32821a25a75bd, type: 2}
-  - <TypeIcon>k__BackingField: {fileID: 21300000, guid: 6a57eedb2eb9acb45ae73c181ef328dc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

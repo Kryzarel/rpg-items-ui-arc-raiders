@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e5787c1b4e1474eaf03b9a452d2e3c, type: 3}
+  m_Name: ItemType - Key
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemCategory
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1ce55f97ef1cc7242b2ff7c342f46f72, type: 3}
+  <SubType>k__BackingField: {fileID: 11400000, guid: dcd53473abbc9a04e925bd39cc6bae82, type: 2}

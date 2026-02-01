@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14bea2cc340a3647b26f247b93aa0fe, type: 3}
+  m_Name: ItemFilterType - Safe Pocket
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemFilterType
+  <Icon>k__BackingField: {fileID: 21300000, guid: 9655c12760e1820489ef799efe61bc7c, type: 3}
+  types:
+  - {fileID: 11400000, guid: ffeff4c27c655744ebc5baac1505bcdb, type: 2}
+  - {fileID: 11400000, guid: 6bed4db6e3bdcc341a11539714f85483, type: 2}
+  - {fileID: 11400000, guid: 67c30a581d12c834094f49f436b66803, type: 2}
+  - {fileID: 11400000, guid: 785dda9835695e24c9dd6082d8cfb855, type: 2}
+  - {fileID: 11400000, guid: f21937d61f4d27343aa892e460fa4ae6, type: 2}
+  - {fileID: 11400000, guid: 91fff05a0deb0444fae020b42649dfc9, type: 2}
+  - {fileID: 11400000, guid: 0537e8c3d4ad0034ca2594b9d19a0a82, type: 2}
+  - {fileID: 11400000, guid: c36c4ecc5e90ff34d90b4e0720c00b48, type: 2}
+  - {fileID: 11400000, guid: e33cef89be7dcd04594082b87b102ade, type: 2}
+  - {fileID: 11400000, guid: aca4f2dbee305cb4c88d49a43ba41de9, type: 2}
+  - {fileID: 11400000, guid: 2e71b1cee2b6413488f6c9218fc07543, type: 2}
+  - {fileID: 11400000, guid: 51de8803e05f1e943983deeaf04f9276, type: 2}
+  - {fileID: 11400000, guid: 1195886b55612724cad8dc0739ef41ad, type: 2}
+  - {fileID: 11400000, guid: de369aeb790d7b04d8d037e2fcfcba8f, type: 2}
+  - {fileID: 11400000, guid: 78551b4784473284690796c9b5444eb5, type: 2}
+  - {fileID: 11400000, guid: 5625523928e60554f9371045033954ee, type: 2}
+  - {fileID: 11400000, guid: 7dcd5322f4320764ba17df638c7b75ca, type: 2}
+  - {fileID: 11400000, guid: c7179415089812b44a9b1ffc23067e3e, type: 2}
+  - {fileID: 11400000, guid: 0943670e153b2ec4aa81bd0f066a1d0c, type: 2}
+  subTypes: []
