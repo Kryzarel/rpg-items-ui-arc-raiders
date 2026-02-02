@@ -23,6 +23,7 @@ MonoBehaviour:
   <BackpackSlots>k__BackingField: 14
   <QuickUseSlots>k__BackingField: 4
   <AugmentedSlots>k__BackingField: 0
+  <AugmentSlotsFilter>k__BackingField: {fileID: 0}
   <SafePocketSlots>k__BackingField: 0
   <WeightLimit>k__BackingField: 35
   shieldCompatibility:

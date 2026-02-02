@@ -15,6 +15,12 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[Header("ARC Raiders Settings")]
 		[SerializeField] protected Color borderColor;
 
+		public override void SetItemStack(ItemStack stack)
+		{
+			itemStack = stack;
+			RefreshVisuals();
+		}
+
 		protected override void RefreshBound()
 		{
 			if (inventory is IRestrictedInventoryVisuals restricted)
