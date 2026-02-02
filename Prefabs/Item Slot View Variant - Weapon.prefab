@@ -14,19 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3162266091607926458, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
       propertyPath: m_PreferredHeight
-      value: 34
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 3164110255799504990, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3190569351848453164, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
-      propertyPath: m_FlexibleWidth
-      value: 1
+      propertyPath: m_PreferredWidth
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3190569351848453164, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
-      propertyPath: m_FlexibleHeight
-      value: 1
+      propertyPath: m_PreferredHeight
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3359582696332932557, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6485281705217549147, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 749ea04c2ead09743a117c7d39e0c75f, type: 3}
     - target: {fileID: 7160797536890907742, guid: b1abe3f59c7be2f45ada4a058369499b, type: 3}
       propertyPath: m_Name
       value: Item Slot View Variant - Weapon

@@ -9,5 +9,10 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		public readonly RestrictedInventory QuickUse = new(4);
 		public readonly RestrictedInventory AugmentSlots = new(1);
 		public readonly RestrictedInventory SafePocket = new(1);
+
+		public Player()
+		{
+			Equipment.OnShieldEjected += stack => Stash.TryAdd(stack, out _);
+		}
 	}
 }

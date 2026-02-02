@@ -9,7 +9,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	{
 		private readonly HashSet<int> lockedSlots = new();
 
-		public Sprite[] SlotSprites = Array.Empty<Sprite>();
+		public event Action<ItemStack> OnShieldEjected = delegate { };
+
+		public IReadOnlyList<ItemFilter> SlotRestrictions = Array.Empty<ItemFilter>();
 
 		public EquipmentPanel(int size, ArrayPool<ItemStack>? pool = null) : base(size, pool)
 		{
@@ -21,7 +23,17 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			if (index == 0)
 			{
 				ref ItemStack slot = ref slots[1];
-				SetSlot(ref slot, 1, slot);
+
+				if (CanReceiveItem(1, slot))
+				{
+					SetSlot(ref slot, 1, slot);
+				}
+				else
+				{
+					ItemStack old = slot;
+					SetSlot(ref slot, 1, default);
+					OnShieldEjected(old);
+				}
 			}
 		}
 
@@ -189,13 +201,27 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 				return false;
 			}
 
-			return stack.Item == null || index switch
+			if (stack.Item == null)
 			{
-				0 => stack.Item is AugmentItem,
-				1 => stack.Item is ShieldItem,
-				>= 2 => stack.Item is WeaponItem,
-				_ => false,
-			};
+				return true;
+			}
+
+			if (stack.Item is not BaseItem baseItem)
+			{
+				return false;
+			}
+
+			if (index >= SlotRestrictions.Count)
+			{
+				return SlotRestrictions[^1].IsItemAllowed(baseItem);
+			}
+
+			if (index == 1 && slots[0].Item is AugmentItem augment)
+			{
+				return augment.Definition.ShieldCompatibility.IsItemAllowed(baseItem);
+			}
+
+			return SlotRestrictions[index].IsItemAllowed(baseItem);
 		}
 
 		public bool CanRemoveItem(int index)
@@ -205,17 +231,22 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		public Sprite? GetSprite(int index)
 		{
-			if (index == 1)
+			if (index < 0 || index >= size)
 			{
-				return slots[0].Item is AugmentItem augment ? augment.Definition.ShieldCompatibility[^1].ItemType.Icon : SlotSprites[1];
+				return null;
 			}
 
-			if (index >= 0 && index < SlotSprites.Length)
+			if (index >= SlotRestrictions.Count)
 			{
-				return SlotSprites[index];
+				return SlotRestrictions[^1].Icon;
 			}
 
-			return null;
+			if (index == 1 && slots[0].Item is AugmentItem augment)
+			{
+				return augment.Definition.ShieldCompatibility.Icon;
+			}
+
+			return SlotRestrictions[index].Icon;
 		}
 	}
 }

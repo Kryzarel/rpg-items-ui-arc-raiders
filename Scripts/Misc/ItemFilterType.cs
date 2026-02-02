@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
 	[CreateAssetMenu(fileName = nameof(ItemFilterType), menuName = "Kryz/RPG Items UI - ARC Raiders/Item Filters/" + nameof(ItemFilterType))]
-	public sealed class ItemFilterType : ItemFilterBase, ISerializationCallbackReceiver
+	public sealed class ItemFilterType : ItemFilter, ISerializationCallbackReceiver
 	{
 		[SerializeField]
 		private ItemType[] types = Array.Empty<ItemType>();

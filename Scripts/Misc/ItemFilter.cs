@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public abstract class ItemFilterBase : ScriptableObject
+	public abstract class ItemFilter : ScriptableObject
 	{
 		[field: SerializeField]
 		public Sprite Icon { get; private set; } = null!;

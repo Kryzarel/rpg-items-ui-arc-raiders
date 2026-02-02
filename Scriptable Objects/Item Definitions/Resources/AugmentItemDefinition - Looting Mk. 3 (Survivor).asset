@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0788a23113469e41a314958c1d70093, type: 3}
+  m_Name: AugmentItemDefinition - Looting Mk. 3 (Survivor)
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.AugmentItemDefinition
+  <Id>k__BackingField: AugmentItemDefinition - Looting Mk. 3 (Survivor)
+  <Icon>k__BackingField: {fileID: 21300000, guid: d1998a5e50a796c4db44f14271f2a7a6, type: 3}
+  <Name>k__BackingField: Looting Mk. 3 (Survivor)
+  <Description>k__BackingField: A heavy-duty pack mule augment. Large weight capacity
+    and large backpack space.
+  <ItemType>k__BackingField: {fileID: 11400000, guid: 96aac7843691fde47973225c5726046f, type: 2}
+  <Rarity>k__BackingField: {fileID: 11400000, guid: 7098e6880dc4e0b47b237404a8a5c877, type: 2}
+  <Weight>k__BackingField: 4
+  <SellPrice>k__BackingField: 5000
+  <BackpackSlots>k__BackingField: 20
+  <QuickUseSlots>k__BackingField: 5
+  <AugmentedSlots>k__BackingField: 1
+  <AugmentSlotsFilter>k__BackingField: {fileID: 11400000, guid: d21c6b794d0cdc14e84897df646ae6cc, type: 2}
+  <SafePocketSlots>k__BackingField: 3
+  <SafePocketSlotsFilter>k__BackingField: {fileID: 11400000, guid: 767ad6dcc2bfd954b979d9d121eeff7a, type: 2}
+  <WeightLimit>k__BackingField: 80
+  <ShieldCompatibility>k__BackingField: {fileID: 11400000, guid: dd91b1cd187089e449a96e8d450eb9f8, type: 2}

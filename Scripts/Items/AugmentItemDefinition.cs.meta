@@ -8,6 +8,8 @@ MonoImporter:
   - <ItemType>k__BackingField: {fileID: 11400000, guid: 96aac7843691fde47973225c5726046f, type: 2}
   - <Rarity>k__BackingField: {fileID: 11400000, guid: c7bf4d06a07da214dac32821a25a75bd, type: 2}
   - <AugmentSlotsFilter>k__BackingField: {instanceID: 0}
+  - <SafePocketSlotsFilter>k__BackingField: {fileID: 11400000, guid: 767ad6dcc2bfd954b979d9d121eeff7a, type: 2}
+  - <ShieldCompatibility>k__BackingField: {fileID: 11400000, guid: 3afde8412ded72e4ea19672e06fddb04, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

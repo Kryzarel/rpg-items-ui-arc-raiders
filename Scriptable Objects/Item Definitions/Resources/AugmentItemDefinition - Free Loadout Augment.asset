@@ -15,7 +15,8 @@ MonoBehaviour:
   <Id>k__BackingField: AugmentItemDefinition - Free Loadout Augment
   <Icon>k__BackingField: {fileID: 21300000, guid: 96c7617d0c4ffe24f804de27375edb4d, type: 3}
   <Name>k__BackingField: Free Loadout
-  <Description>k__BackingField: 
+  <Description>k__BackingField: Basic augment for rookie Raiders, offering slightly
+    more backpack space and carry capacity.
   <ItemType>k__BackingField: {fileID: 11400000, guid: 96aac7843691fde47973225c5726046f, type: 2}
   <Rarity>k__BackingField: {fileID: 11400000, guid: c7bf4d06a07da214dac32821a25a75bd, type: 2}
   <Weight>k__BackingField: 1
@@ -25,6 +26,6 @@ MonoBehaviour:
   <AugmentedSlots>k__BackingField: 0
   <AugmentSlotsFilter>k__BackingField: {fileID: 0}
   <SafePocketSlots>k__BackingField: 0
+  <SafePocketSlotsFilter>k__BackingField: {fileID: 11400000, guid: 767ad6dcc2bfd954b979d9d121eeff7a, type: 2}
   <WeightLimit>k__BackingField: 35
-  shieldCompatibility:
-  - {fileID: 11400000, guid: b8f0468bb35c9104d9abb7eaece2ffd9, type: 2}
+  <ShieldCompatibility>k__BackingField: {fileID: 11400000, guid: 3afde8412ded72e4ea19672e06fddb04, type: 2}

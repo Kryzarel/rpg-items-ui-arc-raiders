@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
@@ -15,14 +13,14 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[field: SerializeField]
 		public int AugmentedSlots { get; private set; } = 0;
 		[field: SerializeField]
-		public ItemFilterBase? AugmentSlotsFilter { get; private set; }
+		public ItemFilter? AugmentSlotsFilter { get; private set; }
 		[field: SerializeField]
 		public int SafePocketSlots { get; private set; } = 0;
 		[field: SerializeField]
+		public ItemFilter? SafePocketSlotsFilter { get; private set; }
+		[field: SerializeField]
 		public int WeightLimit { get; private set; } = 0;
-		[SerializeField]
-		private ShieldItemDefinition[] shieldCompatibility = Array.Empty<ShieldItemDefinition>();
-
-		public IReadOnlyList<ShieldItemDefinition> ShieldCompatibility => shieldCompatibility;
+		[field: SerializeField]
+		public ItemFilter ShieldCompatibility { get; private set; } = null!;
 	}
 }

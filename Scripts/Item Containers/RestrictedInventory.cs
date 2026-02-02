@@ -5,11 +5,11 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 {
 	public class RestrictedInventory : Inventory, IRestrictedInventory, IRestrictedInventoryVisuals
 	{
-		public ItemFilterBase? ItemFilter;
+		public ItemFilter? ItemFilter;
 
 		public RestrictedInventory(int numSlots, ArrayPool<ItemStack>? pool = null) : base(numSlots, pool) { }
 
-		public RestrictedInventory(ItemFilterBase itemFilter, int numSlots, ArrayPool<ItemStack>? pool = null) : base(numSlots, pool)
+		public RestrictedInventory(ItemFilter itemFilter, int numSlots, ArrayPool<ItemStack>? pool = null) : base(numSlots, pool)
 		{
 			ItemFilter = itemFilter;
 		}

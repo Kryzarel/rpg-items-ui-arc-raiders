@@ -5282,18 +5282,18 @@ MonoBehaviour:
   itemDefinitions:
   - {fileID: 11400000, guid: a532dc94c92d11f46872701f5bef8078, type: 2}
   - {fileID: 11400000, guid: 051c83d96a42c7e49a99a4b38f2d40c3, type: 2}
+  - {fileID: 11400000, guid: 562af573f84f5bc48a5dfedea7261af3, type: 2}
   - {fileID: 11400000, guid: b8f0468bb35c9104d9abb7eaece2ffd9, type: 2}
   - {fileID: 11400000, guid: a0e1d856636e8084485e2cb77e6b8643, type: 2}
   - {fileID: 11400000, guid: 26c9e75c440e9f242a553bc94762d427, type: 2}
   - {fileID: 11400000, guid: 1fc25809dccd4e4409ed183471d2789c, type: 2}
-  itemCounts: 050000000100000001000000010000000100000001000000
+  itemCounts: 05000000010000000100000001000000010000000100000001000000
   quickUseFilter: {fileID: 11400000, guid: ac345e013cf2e8c45b5df92bdbbc8fd6, type: 2}
   safePocketFilter: {fileID: 11400000, guid: 767ad6dcc2bfd954b979d9d121eeff7a, type: 2}
-  equipmentSprites:
-  - {fileID: 21300000, guid: 1469b2bf4be10654dbe7bf2845597eef, type: 3}
-  - {fileID: 21300000, guid: daf2d6432fb1d7c4892aaa1d65e8ca7b, type: 3}
-  - {fileID: 21300000, guid: 1fdca7efb535ac9498f096bfb3c9ff51, type: 3}
-  - {fileID: 21300000, guid: 1fdca7efb535ac9498f096bfb3c9ff51, type: 3}
+  equipmentRestrictions:
+  - {fileID: 11400000, guid: 0097e81bc3e6c9c489fd760bd5da39eb, type: 2}
+  - {fileID: 11400000, guid: 3afde8412ded72e4ea19672e06fddb04, type: 2}
+  - {fileID: 11400000, guid: ce74b9095e47eea46954aeb1a54917b3, type: 2}
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0
@@ -7847,7 +7847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1324315164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10097,7 +10097,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1778206567}
   m_HandleRect: {fileID: 1778206566}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -11006,7 +11006,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1611815891}
   m_HandleRect: {fileID: 1611815890}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
