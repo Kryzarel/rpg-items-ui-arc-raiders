@@ -52,7 +52,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			{
 				player.Stash.SetSlot(transaction, i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]));
 			}
-			transaction.Commit();
+			transaction.SetResult(true);
 
 			inventoryController.SetContainer(player.Stash);
 		}
