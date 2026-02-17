@@ -7,7 +7,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	public class Initializer : MonoBehaviour
 	{
 		private readonly ItemFactory itemFactory = new(new ItemDefinitionDatabaseResources());
-		private readonly NewInventory cursorInventory = new(1);
+		private readonly Inventory cursorInventory = new(1);
 		private readonly Player player = new();
 
 		[Header("References")]
