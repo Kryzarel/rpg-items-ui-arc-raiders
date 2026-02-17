@@ -7,7 +7,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	public class Initializer : MonoBehaviour
 	{
 		private readonly ItemFactory itemFactory = new(new ItemDefinitionDatabaseResources());
-		private readonly Inventory cursorInventory = new(1);
+		private readonly NewInventory cursorInventory = new(1);
 		private readonly Player player = new();
 
 		[Header("References")]
@@ -45,12 +45,14 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			player.Equipment.SlotRestrictions = equipmentRestrictions;
 
 			inventoryController!.SetPlayer(player);
-			cursorInventoryView!.SetInventory(cursorInventory);
+			cursorInventoryView!.SetItemContainer(cursorInventory);
 
+			using ItemTransaction transaction = new(player.Stash);
 			for (int i = 0; i < itemDefinitions.Length; i++)
 			{
-				player.Stash.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
+				player.Stash.SetSlot(transaction, i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]));
 			}
+			transaction.Commit();
 
 			inventoryController.SetContainer(player.Stash);
 		}

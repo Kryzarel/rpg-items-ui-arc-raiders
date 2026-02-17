@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public class RestrictedInventory : Inventory, IRestrictedInventory, IRestrictedInventoryVisuals
+	public class RestrictedInventory : ItemContainer, IRestrictedInventoryVisuals
 	{
 		public ItemFilter? ItemFilter;
 
@@ -14,50 +14,10 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			ItemFilter = itemFilter;
 		}
 
-		public override bool CanSwap(int index, in ItemStack stack, out ItemStack removed)
+		public override bool CanReceive(int index, IItem item)
 		{
-			removed = default;
-			return CanReceiveItem(index, stack) && base.CanSwap(index, stack, out removed);
+			return ItemFilter == null || item == null || item is BaseItem baseItem && ItemFilter.IsItemAllowed(baseItem);
 		}
-
-		public override bool CanAdd(in ItemStack stack, out ItemStack remainder, bool allowPartial = false)
-		{
-			remainder = stack;
-			return CanReceiveItem(0, stack) && base.CanAdd(stack, out remainder, allowPartial);
-		}
-
-		public override bool CanAdd(int index, in ItemStack stack, out ItemStack result, out ItemStack remainder, bool allowPartial = false)
-		{
-			result = default;
-			remainder = stack;
-			return CanReceiveItem(index, stack) && base.CanAdd(index, stack, out result, out remainder, allowPartial);
-		}
-
-		public override bool TrySwap(int index, in ItemStack stack, out ItemStack removed, bool forceSwap = false)
-		{
-			removed = default;
-			return CanReceiveItem(index, stack) && base.TrySwap(index, stack, out removed);
-		}
-
-		public override bool TryAdd(in ItemStack stack, out ItemStack remainder, bool allowPartial = false)
-		{
-			remainder = stack;
-			return CanReceiveItem(0, stack) && base.TryAdd(stack, out remainder, allowPartial);
-		}
-
-		public override bool TryAdd(int index, in ItemStack stack, out ItemStack result, out ItemStack remainder, bool allowPartial = false)
-		{
-			result = default;
-			remainder = stack;
-			return CanReceiveItem(index, stack) && base.TryAdd(index, stack, out result, out remainder, allowPartial);
-		}
-
-		public bool CanReceiveItem(int index, in ItemStack stack)
-		{
-			return ItemFilter == null || stack.Item == null || stack.Item is BaseItem baseItem && ItemFilter.IsItemAllowed(baseItem);
-		}
-
-		public bool CanRemoveItem(int index) => true;
 
 		public Sprite? GetSprite(int index)
 		{

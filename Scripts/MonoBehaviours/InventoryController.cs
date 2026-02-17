@@ -18,16 +18,16 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		public void SetPlayer(Player player)
 		{
 			Player = player;
-			equipment!.SetInventory(player.Equipment);
-			backpack!.SetInventory(player.Backpack);
-			quickUse!.SetInventory(player.QuickUse);
-			augmentSlots!.SetInventory(player.AugmentSlots);
-			safePocket!.SetInventory(player.SafePocket);
+			equipment!.SetItemContainer(player.Equipment);
+			backpack!.SetItemContainer(player.Backpack);
+			quickUse!.SetItemContainer(player.QuickUse);
+			augmentSlots!.SetItemContainer(player.AugmentSlots);
+			safePocket!.SetItemContainer(player.SafePocket);
 		}
 
-		public void SetContainer(IInventory container)
+		public void SetContainer(IItemContainer container)
 		{
-			containerOrStash!.SetInventory(container);
+			containerOrStash!.SetItemContainer(container);
 		}
 	}
 }
