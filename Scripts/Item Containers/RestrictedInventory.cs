@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public class RestrictedInventory : ItemContainer, IRestrictedInventoryVisuals
+	public class RestrictedInventory : ItemContainer, IRestrictedItemContainerVisuals
 	{
 		public ItemFilter? ItemFilter;
 

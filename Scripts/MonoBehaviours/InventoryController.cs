@@ -6,12 +6,12 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	public class InventoryController : MonoBehaviour
 	{
 		[Header("Inventory Views")]
-		[SerializeField] InventoryView? containerOrStash;
-		[SerializeField] InventoryView? equipment;
-		[SerializeField] InventoryView? backpack;
-		[SerializeField] InventoryView? quickUse;
-		[SerializeField] InventoryView? augmentSlots;
-		[SerializeField] InventoryView? safePocket;
+		[SerializeField] ItemContainerView? containerOrStash;
+		[SerializeField] ItemContainerView? equipment;
+		[SerializeField] ItemContainerView? backpack;
+		[SerializeField] ItemContainerView? quickUse;
+		[SerializeField] ItemContainerView? augmentSlots;
+		[SerializeField] ItemContainerView? safePocket;
 
 		public Player Player { get; private set; } = null!;
 

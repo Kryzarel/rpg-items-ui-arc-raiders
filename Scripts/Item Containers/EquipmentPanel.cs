@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public sealed class EquipmentPanel : ItemContainer, IRestrictedInventoryVisuals
+	public sealed class EquipmentPanel : ItemContainer, IRestrictedItemContainerVisuals
 	{
 		private readonly HashSet<int> lockedSlots = new();
 

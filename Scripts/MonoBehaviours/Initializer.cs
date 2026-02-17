@@ -12,7 +12,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		[Header("References")]
 		[SerializeField] InventoryController? inventoryController;
-		[SerializeField] InventoryView? cursorInventoryView;
+		[SerializeField] ItemContainerView? cursorInventoryView;
 		[SerializeField] BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
 		[SerializeField] int[] itemCounts = Array.Empty<int>();
 		[Header("Other")]
