@@ -5278,7 +5278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.Initializer
   inventoryController: {fileID: 1331238663}
-  cursorInventoryView: {fileID: 1584029741}
   itemDefinitions:
   - {fileID: 11400000, guid: a532dc94c92d11f46872701f5bef8078, type: 2}
   - {fileID: 11400000, guid: 051c83d96a42c7e49a99a4b38f2d40c3, type: 2}
@@ -5294,6 +5293,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0097e81bc3e6c9c489fd760bd5da39eb, type: 2}
   - {fileID: 11400000, guid: 3afde8412ded72e4ea19672e06fddb04, type: 2}
   - {fileID: 11400000, guid: ce74b9095e47eea46954aeb1a54917b3, type: 2}
+  duck: {fileID: 11400000, guid: a532dc94c92d11f46872701f5bef8078, type: 2}
 --- !u!1 &956312286
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,7 +9861,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1584029740}
   - component: {fileID: 1584029742}
-  - component: {fileID: 1584029741}
   m_Layer: 5
   m_Name: Item Slot Drag Controller
   m_TagString: Untagged
@@ -9889,25 +9888,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1584029741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584029739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd1959ab092c08438a0b63d5e2bd1e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.InventoryView
-  itemSlotPrefab: {fileID: 512588435662629935, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
-  itemSlotsParent: {fileID: 1584029740}
-  itemSlots:
-  - {fileID: 512588434169869911}
-  itemSlotController: {fileID: 0}
-  minSlots: 1
-  maxSlots: 1
 --- !u!114 &1584029742
 MonoBehaviour:
   m_ObjectHideFlags: 0
