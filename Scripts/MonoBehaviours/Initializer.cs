@@ -19,6 +19,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		[SerializeField] ItemFilter[] equipmentRestrictions = Array.Empty<ItemFilter>();
 		[SerializeField] BaseItemDefinition? duck;
 
+		// private Blur? blur;
+		private Canvas? canvas;
+
 		private void OnValidate()
 		{
 			Array.Resize(ref itemCounts, itemDefinitions.Length);
@@ -39,6 +42,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		private void Start()
 		{
+			// blur = FindAnyObjectByType<Blur>();
+			canvas = FindAnyObjectByType<Canvas>();
+
 			player.QuickUse.ItemFilter = quickUseFilter;
 			player.SafePocket.ItemFilter = safePocketFilter;
 			player.Equipment.SlotRestrictions = equipmentRestrictions;
@@ -48,8 +54,9 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			using ItemTransaction transaction = new(player.Stash);
 			for (int i = 0; i < itemDefinitions.Length; i++)
 			{
-				player.Stash.SetSlot(transaction, i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]));
+				player.Stash.TryAdd(transaction, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
 			}
+			player.Stash.Sort(transaction);
 			transaction.SetResult(true);
 
 			inventoryController.SetContainer(player.Stash);
@@ -60,6 +67,12 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			if (Keyboard.current.spaceKey.wasPressedThisFrame)
 			{
 				player.Stash.TryAdd(new ItemStack(itemFactory.Create(duck!)), out _);
+			}
+
+			if (Keyboard.current.tabKey.wasPressedThisFrame)
+			{
+				// if (blur != null) blur.enabled = !blur.enabled;
+				if (canvas != null) canvas.enabled = !canvas.enabled;
 			}
 		}
 	}

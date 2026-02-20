@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemRarity
   <Name>k__BackingField: Rare
   <Color>k__BackingField: {r: 0.11764706, g: 0.79607844, b: 0.9882353, a: 1}
+  <SortOrder>k__BackingField: 2

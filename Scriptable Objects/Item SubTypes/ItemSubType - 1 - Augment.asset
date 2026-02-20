@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9da87ae6fc71914f9acc9eab66a803a, type: 3}
-  m_Name: ItemSubType - Augment
+  m_Name: ItemSubType - 1 - Augment
   m_EditorClassIdentifier: Kryz.RPG.Items.UI.ARCRaiders::Kryz.RPG.Items.UI.ARCRaiders.ItemSubType
   <Name>k__BackingField: Augment

@@ -18,6 +18,19 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 			Definition = definition;
 		}
 
-		public virtual int CompareTo(IItem other) => Name.CompareTo(other.Name);
+		public virtual int CompareTo(IItem other)
+		{
+			int result = -1;
+			if (other is BaseItem baseItem)
+			{
+				result = Definition.ItemType.CompareTo(baseItem.Definition.ItemType);
+				if (result != 0) return result;
+				// Compare this one in reverse because we want higher rarities first
+				result = baseItem.Definition.Rarity.CompareTo(Definition.Rarity);
+				if (result != 0) return result;
+				return string.Compare(Name, baseItem.Name, System.StringComparison.Ordinal);
+			}
+			return result;
+		}
 	}
 }

@@ -2,7 +2,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 {
 	public class Player
 	{
-		public readonly Inventory Stash = new(160); // Probably needs to be moved out of here.
+		public readonly Stash Stash = new(160); // Probably needs to be moved out of here.
 
 		public readonly EquipmentPanel Equipment = new(4);
 		public readonly Inventory Backpack = new(10);
