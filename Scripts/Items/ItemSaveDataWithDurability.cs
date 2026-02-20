@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public class ItemSaveDataWithDurability : ItemSaveDataBase
+	public class ItemSaveDataWithDurability : ItemSaveData
 	{
 		[field: SerializeField, Range(0, 100)]
 		public int Durability { get; private set; }

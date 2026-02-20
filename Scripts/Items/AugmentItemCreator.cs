@@ -1,6 +1,6 @@
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public sealed class AugmentItemCreator : ItemCreatorBase<AugmentItemDefinition, AugmentItem, ItemSaveDataWithDurability>
+	public sealed class AugmentItemCreator : ItemCreator<AugmentItemDefinition, AugmentItem, ItemSaveDataWithDurability>
 	{
 		public override AugmentItem Create(AugmentItemDefinition definition)
 		{

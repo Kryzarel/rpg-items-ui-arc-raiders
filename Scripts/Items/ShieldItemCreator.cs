@@ -1,6 +1,6 @@
 namespace Kryz.RPG.Items.UI.ARCRaiders
 {
-	public sealed class ShieldItemCreator : ItemCreatorBase<ShieldItemDefinition, ShieldItem, ItemSaveDataWithDurability>
+	public sealed class ShieldItemCreator : ItemCreator<ShieldItemDefinition, ShieldItem, ItemSaveDataWithDurability>
 	{
 		public override ShieldItem Create(ShieldItemDefinition definition)
 		{
