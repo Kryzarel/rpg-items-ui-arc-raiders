@@ -1,4 +1,4 @@
-using Kryz.RPG.Items.Views;
+using Kryz.RPG.Items.UGUI;
 using UnityEngine;
 
 namespace Kryz.RPG.Items.UI.ARCRaiders

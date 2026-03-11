@@ -3,7 +3,7 @@
     "rootNamespace": "Kryz.RPG.Items.UI.ARCRaiders",
     "references": [
         "Kryz.RPG.Items",
-        "Kryz.RPG.Items.Views",
+        "Kryz.RPG.Items.UGUI",
         "Unity.InputSystem"
     ],
     "includePlatforms": [],
