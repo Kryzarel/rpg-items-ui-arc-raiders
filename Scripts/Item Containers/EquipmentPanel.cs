@@ -9,26 +9,29 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 	{
 		private readonly HashSet<int> lockedSlots = new();
 
-		public event Action<ItemStack> OnShieldEjected = delegate { };
+		public ItemContainer? Overflow;
 
 		public IReadOnlyList<ItemFilter> SlotRestrictions = Array.Empty<ItemFilter>();
 
 		public EquipmentPanel(int size, ArrayPool<ItemStack>? pool = null) : base(size, pool)
 		{
-			OnSlotChanged += UpdateShieldSlot;
 		}
 
-		private void UpdateShieldSlot(int index, ItemStack previousStack, ItemStack newStack)
+		public override bool TryRemoveSlot<T>(T transaction, int index, out ItemStack result, out ItemStack removed, int count = -1)
 		{
-			if (index == 0)
+			bool success = base.TryRemoveSlot(transaction, index, out result, out removed, count);
+
+			if (success && index == 0)
 			{
 				IItem? shield = this[1].Item;
 
-				if (shield != null && !CanReceive(1, shield) && TryRemoveSlot(1, out _, out ItemStack removed))
+				if (shield != null && !CanReceive(1, shield))
 				{
-					OnShieldEjected?.Invoke(removed);
+					return Overflow != null && TryMove(transaction, 1, Overflow);
 				}
+				return true;
 			}
+			return success;
 		}
 
 		public override bool CanReceive(int index, IItem item)

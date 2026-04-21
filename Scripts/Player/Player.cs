@@ -12,7 +12,7 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 
 		public Player()
 		{
-			Equipment.OnShieldEjected += stack => Stash.TryAdd(stack, out _);
+			Equipment.Overflow = Stash;
 		}
 	}
 }
