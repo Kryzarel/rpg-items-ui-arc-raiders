@@ -17,21 +17,15 @@ namespace Kryz.RPG.Items.UI.ARCRaiders
 		{
 		}
 
-		public override bool TryRemoveSlot<T>(T transaction, int index, out ItemStack result, out ItemStack removed, int count = -1)
+		public override bool UpdateTransactionInvariants<T>(T transaction)
 		{
-			bool success = base.TryRemoveSlot(transaction, index, out result, out removed, count);
+			IItem? shield = this[1].Item;
 
-			if (success && index == 0)
+			if (shield != null && !CanReceive(1, shield))
 			{
-				IItem? shield = this[1].Item;
-
-				if (shield != null && !CanReceive(1, shield))
-				{
-					return Overflow != null && TryMove(transaction, 1, Overflow);
-				}
-				return true;
+				return Overflow != null && TryMove(transaction, 1, Overflow);
 			}
-			return success;
+			return false;
 		}
 
 		public override bool CanReceive(int index, IItem item)
