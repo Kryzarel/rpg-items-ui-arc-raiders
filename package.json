@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "com.unity.inputsystem": "1.0.0",
-    "com.kryzarel.rpg-items": "0.0.0"
-  }
+    "com.kryzarel.rpg-items": "0.1.0"
+  },
+  "unity": "2021.2"
 }
