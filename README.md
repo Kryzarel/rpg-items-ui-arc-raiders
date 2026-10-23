@@ -1,4 +1,4 @@
-# RPG Items UI
+# RPG Items UI ARC Raiders
 
 An example UI for the [RPG Items](https://github.com/Kryzarel/rpg-items) framework.
 
